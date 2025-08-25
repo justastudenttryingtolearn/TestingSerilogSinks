@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "TestingSerilogSinks": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_STARTUP_HOOKS": "OpenTelemetry.AutoInstrumentation.StartupHook",
+        "OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED": "true",
+        "OTEL_DOTNET_AUTO_RULE_ENGINE_ENABLED": "false",
+        "OTEL_TRACES_SAMPLER": "AlwaysOnSampler",
+        "OTEL_TRACES_SAMPLER_ARG": "1,0",
+        "OTEL_LOG_LEVEL": "debug",
+        "OTEL_SERVICE_NAME": "testing-serilog-sinks",
+        "OTEL_EXPORTER_OTLP_ENDPOINT": "http://127.0.0.1:4317/",
+        "OTEL_RESOURCE_ATTRIBUTES": "deployment.environment=Local"
+      }
+    }
+  }
+}
+
